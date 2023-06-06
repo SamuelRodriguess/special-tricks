@@ -20,6 +20,9 @@ function compose(...fns) {
     }, arg)
   }
 }
+// Ao vincular argumentos usando bind, você está pré-configurando essas funções com argumentos específicos
+// antes mesmo de serem chamadas. No momento em que a função addThenMultiply é executada, os argumentos
+// vinculados serão mantidos e serão passados automaticamente para as funções correspondentes (multiply, add e sub).
 
 const addThenMultiply = compose(
   multiply.bind(null, 2),
