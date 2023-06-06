@@ -2,6 +2,8 @@ function expensiveFunction(arg: number) {
   return arg * 2
 }
 
+// esse conceito é usado no React com o hook useMemo
+
 function memoizeFunction(fn: (value: number) => number) {
   const cache = new Map()
 
